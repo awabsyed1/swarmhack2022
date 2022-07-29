@@ -1,4 +1,4 @@
-# swarmhack2022
+# swarmhack2022 *[Hackathon]*
 
 
 # Autonomous swarm challenge
