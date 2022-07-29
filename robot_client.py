@@ -2,7 +2,7 @@
 
 # tunable parameters
 bearing_threshold = 20
-master_id = 11
+master_id = 41
 master_mind_mode = False
 
 from cmath import inf
@@ -392,7 +392,7 @@ def move_to2(robot, goal):
                 return robot.MAX_SPEED, -robot.MAX_SPEED # turn right
 
         # move to task
-        if goal["range"] > .05:#math.sqrt(goal.get("workers", 4)) * 0.05:
+        if goal["range"] > math.sqrt(goal.get("workers", 4)) * 0.05:
             return robot.MAX_SPEED, robot.MAX_SPEED # move forward
     elif robot.state == RobotState.LEFT:
         if time.time() - robot.turn_time > robot.time_to_turn:
@@ -650,8 +650,8 @@ if __name__ == "__main__":
         sys.exit(1)
 
     # Specify robots to work with
-    #robot_ids = range(11, 15)
-    robot_ids = [11, 15, 13, 12, 14]
+    robot_ids = range(41, 46)
+    #robot_ids = [11, 15, 13, 12, 14]
 
     for robot_id in robot_ids:
         if robots[robot_id] != '':
